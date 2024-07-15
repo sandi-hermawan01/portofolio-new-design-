@@ -137,7 +137,7 @@ const Work = () => {
           <div className="w-full xl:w-[50%]">
             <Swiper
               spaceBetween={30}
-              sliderPerView={1}
+              slidesPerView={1}
               onSlideChange={handleSlideChange}
               className="xl:h-[520px] mb-12"
             >
@@ -152,6 +152,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
+                          alt=""
                           className="object-cover"
                         />
                       </div>
