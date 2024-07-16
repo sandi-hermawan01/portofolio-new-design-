@@ -36,7 +36,7 @@ const Stairs = () => {
               ease: "easeInOut",
               delay: reverseIndex(index) * 0.1,
             }}
-            className="h-full w-full bg-white border-t-4 border-accent relative"
+            className="h-full w-full bg-primary border-t-4 border-light relative"
           />
         );
       })}

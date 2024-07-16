@@ -20,7 +20,14 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:mt-10 xl:pb-24">
           {/* text */}
-          <div className="text-center xl:text-left xl:justify-center order-2 xl:order-none">
+          <div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
+            }}
+            className="text-center xl:text-left xl:justify-center order-2 xl:order-none"
+          >
             <h1
               className={`${font_use} h1 mb-6 font-fjallaOne text-primary/80`}
             >

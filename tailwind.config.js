@@ -47,12 +47,6 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: {
-        grid_right:
-          "linear-gradient(to right, transparent 8px, #25283b22 100px)",
-        grid_bottom:
-          " linear-gradient(to bottom, transparent 100px, #25283b22 101px)",
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],
