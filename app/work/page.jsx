@@ -6,6 +6,8 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
+import { JetBrains_Mono } from "next/font/google";
+
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
   Tooltip,
@@ -17,6 +19,12 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsMono",
+});
 
 const projects = [
   {
@@ -76,25 +84,27 @@ const Work = () => {
       }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto xl:mt-5">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+              <div
+                className={`${jetbrainsMono.variable} font-jetbrain text-8xl leading-none font-extrabold text-transparent text-outline`}
+              >
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              <h2 className="text-[42px] font-bold leading-none text-primary/80 group-hover:text-accent transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
               {/* project descrip */}
-              <p className="text-white/70">{project.description}</p>
+              <p className="text-primary/70 text-md">{project.description}</p>
               {/* tech stack */}
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
+                    <li key={index} className="text-xl text-primary">
                       {item.name}
                       {index !== project.stack.length - 1 && ","}
                     </li>
@@ -102,14 +112,14 @@ const Work = () => {
                 })}
               </ul>
               {/* border */}
-              <div className="border border-white/20"></div>
+              <div className="border border-primary/20"></div>
               {/* button */}
               <div className="flex items-center gap-4">
                 {/* live button */}
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full outline-primary/70 outline flex justify-center items-center group">
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
@@ -122,7 +132,7 @@ const Work = () => {
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full outline-primary/70 outline flex justify-center items-center group">
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>

@@ -22,14 +22,15 @@ module.exports = {
     fontFamily: {
       primary: "var(--font-lora)",
       fjallaOne: "var(--font-FjallaOne)",
+      jetbrain: "var(--font-jetbrainsMono)",
     },
     extend: {
       colors: {
-        light: "#d4d4d4",
-        primary: "#1c1c22",
+        light: "#d2d2d2",
+        primary: "#25283B",
         accent: {
-          DEFAULT: "#00ff99",
-          hover: "#00e187",
+          DEFAULT: "#fff",
+          hover: "#f2f2f2",
         },
       },
       keyframes: {
@@ -47,7 +48,10 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        wuwa: "url('/assets/bg-wuwa.jpeg)",
+        grid_right:
+          "linear-gradient(to right, transparent 8px, #25283b22 100px)",
+        grid_bottom:
+          " linear-gradient(to bottom, transparent 100px, #25283b22 101px)",
       },
     },
   },

@@ -2,6 +2,7 @@
 
 import { BsArrowDownRight } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 
 const services = [
@@ -33,11 +34,31 @@ const services = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
     href: "",
   },
+  {
+    num: "05",
+    title: "Nodejs",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+    href: "",
+  },
+  {
+    num: "06",
+    title: "Nextjs",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+    href: "",
+  },
 ];
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsMono",
+});
 
 const Services = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0 xl:mt-16">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -51,26 +72,30 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className="flex-1 flex flex-col justify-center gap-6 group"
+                className="flex-1 flex flex-col justify-center gap-6 group px-4"
               >
                 {/* top */}
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                  <div
+                    className={`${jetbrainsMono.variable} font-jetbrain text-7xl font-extrabold text-outline outline-4 text-transparent group-hover:drop-shadow-lg group-hover:text-outline-hover transition-all duration-500`}
+                  >
                     {service.num}
                   </div>
                   <Link
                     href={service.href}
-                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                    className="w-[60px] h-[60px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
                     <BsArrowDownRight className="text-primary text-3xl" />
                   </Link>
                 </div>
                 {/* title */}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                <h2 className="text-[42px] font-bold leading-none text-primary/80 group-hover:text-accent group-hover:sm-text-outline transition-all duration-500">
                   {service.title}
                 </h2>
                 {/* descrip */}
-                <p className="text-white/75">{service.description}</p>
+                <p className="text-primary/70 text-xl group-hover:text-accent group-hover:drop-shadow-2xl ">
+                  {service.description}
+                </p>
                 {/* border */}
                 <div className="border-b border-white/20 w-full"></div>
               </div>

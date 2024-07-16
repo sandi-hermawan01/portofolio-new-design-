@@ -1,4 +1,6 @@
-import { JetBrains_Mono, Lora } from "next/font/google";
+import { Lora } from "next/font/google";
+import Image from "next/image";
+import background from "../public/assets/bg.png";
 
 import "./globals.css";
 
@@ -7,11 +9,11 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrainsMono",
-});
+// const jetbrainsMono = JetBrains_Mono({
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+//   variable: "--font-jetbrainsMono",
+// });
 
 const lora = Lora({
   subsets: ["latin"],
@@ -31,8 +33,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lora.variable} bg-wuwa`}>
-        <section className="h-screen w-screen">
+      <body
+        className={`${lora.variable} z-[-2] h-full w-full absolute inset-0 bg-[linear-gradient(to_right,#25283b22_1px,transparent_1px),linear-gradient(to_bottom,#25283b22_1px,transparent_1px)] bg-[size:100px_100px]`}
+      >
+        <section className="relative w-full bg-transparent">
+          <div className="absolute mt-[6.3rem] z-[-1]">
+            <Image src={background} alt="bg img" className="w-full" />
+          </div>
           <Header />
           <StairTransition />
           <PageTransition>{children}</PageTransition>

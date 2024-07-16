@@ -23,10 +23,12 @@ const Home = () => {
           <div className="text-center xl:text-left xl:justify-center order-2 xl:order-none">
             <h1 className={`${font_use} h1 mb-6 font-fjallaOne`}>
               Zsans Personal{" "}
-              <span className="text-accent font-fjallaOne">Portofolio</span>
+              <span className="text-accent font-fjallaOne">
+                Portfolio
+              </span>
             </h1>
             <span className={`text-xl font-semi`}>
-              Web Depeloper || Frontend Developer
+              Web Developer || Frontend Developer
             </span>
             <p className="max-w-[700px] mt-2 mb-9 text-primary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
