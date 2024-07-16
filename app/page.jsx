@@ -18,14 +18,14 @@ const Home = () => {
   return (
     <section className="h-full w-full">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:mt-10 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left xl:justify-center order-2 xl:order-none">
-            <h1 className={`${font_use} h1 mb-6 font-fjallaOne`}>
+            <h1
+              className={`${font_use} h1 mb-6 font-fjallaOne text-primary/80`}
+            >
               Zsans Personal{" "}
-              <span className="text-accent font-fjallaOne">
-                Portfolio
-              </span>
+              <span className="text-accent font-fjallaOne">Portfolio</span>
             </h1>
             <span className={`text-xl font-semi`}>
               Web Developer || Frontend Developer
