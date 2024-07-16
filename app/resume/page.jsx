@@ -1,16 +1,8 @@
 "use client";
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaOutdent,
-  FaShare,
-  FaNode,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNode } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs, SiNotist } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -25,12 +17,11 @@ import { motion } from "framer-motion";
 //about
 const about = {
   title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+  description: "Here are the details of my personal data",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Zsans",
+      fieldValue: "Sandi Hermawna",
     },
     {
       fieldName: "Phone",
@@ -66,7 +57,7 @@ const experience = {
   icon: "/asset/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+    "The following is my work experience, my experience in the world of work is still relatively small, but I always want to develop and try to keep up with technological developments.",
   items: [
     {
       company: "JDIH (Jaringan Dokumentasi dan Informasi Hukum) Kota Bandung",
@@ -79,7 +70,7 @@ const education = {
   icon: "/asset/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+    "Here is my educational journey, from a bachelor's degree in computer science to bootcamps and online courses.",
   items: [
     {
       institution: "Universitas Teknologi Bandung",
@@ -106,7 +97,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+    "The following are some of the skills that I have mastered quite well.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -180,7 +171,7 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold text-primary/80">
                   {experience.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/70 text-xl mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-primary/70 text-xl mx-auto xl:mx-0 drop-shadow-md">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -214,7 +205,7 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold text-primary/80">
                   {education.title}
                 </h3>
-                <p className="max-w-[600px] text-primary/70 text-xl mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-primary/70 text-xl mx-auto xl:mx-0 drop-shadow-md">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px] border-2 border-primary/30 mb-5">
@@ -251,7 +242,7 @@ const Resume = () => {
                   <h3 className="text-4xl font-bold text-primary/80">
                     {skills.title}
                   </h3>
-                  <p className="max-w-[600px] text-xl text-primary/70 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-xl text-primary/70 mx-auto xl:mx-0 drop-shadow-md">
                     {skills.description}
                   </p>
                 </div>
@@ -287,7 +278,7 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold text-primary/80">
                   {about.title}
                 </h3>
-                <p className="max-w-[600px] text-xl text-primary/70 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-xl text-primary/70 mx-auto xl:mx-0 drop-shadow-md">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[650px] mx-auto xl:mx-0 ">

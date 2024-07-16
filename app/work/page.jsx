@@ -9,6 +9,7 @@ import "swiper/css";
 import { JetBrains_Mono } from "next/font/google";
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+
 import {
   Tooltip,
   TooltipContent,
@@ -29,41 +30,45 @@ const jetbrainsMono = JetBrains_Mono({
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project 1",
+    category: "fullstack",
+    title: "zsans blog publisher",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cuipiditate magnam modi distintio id adipisci officiis!",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
+      "zsans - blog publiher is a platform to publish articles easily, created by sandi hermawan with the help of the internet, one of which is youtube.",
+    stack: [
+      { name: "React.js" },
+      { name: "Tailwind" },
+      { name: "Postcss" },
+      { name: "Express.Js" },
+      { name: "MongoDb" },
+      { name: "AWS S3" },
+    ],
+    image: "/assets/work/zsans-blog-publisher-promo.png",
+    live: "https://www.zsans-product.tech/",
     github: "",
+    status: "private",
   },
   {
     num: "02",
-    category: "backend",
-    title: "project 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cuipiditate magnam modi distintio id adipisci officiis!",
-    stack: [{ name: "Node.js" }, { name: "Axios" }, { name: "MongoDb" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
+    category: "fullstack",
+    title: "portfolio v2",
+    description: "Nothing special on this theme, just a simple portfolio",
+    stack: [{ name: "Node.js" }, { name: "Next.js" }, { name: "Tailwind" }],
+    image: "/assets/work/portfv2.jpg",
+    live: "https://zsans-product.online/",
+    github: "https://github.com/sandi-hermawan01/personal-portofolioV2.git",
+    status: "public",
   },
   {
     num: "03",
     category: "fullstack",
-    title: "project 3",
+    title: "portfolio v1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cuipiditate magnam modi distintio id adipisci officiis!",
-    stack: [
-      { name: "Tailwind" },
-      { name: "React.js" },
-      { name: "Node.js" },
-      { name: "MongoDb" },
-    ],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cuipiditate magnam modThis is my first portfolio using vanilla technology like html css, the design is pretty good but the structure is still messy :)",
+    stack: [{ name: "Html" }, { name: "Css" }, { name: "Javascript" }],
+    image: "/assets/work/portfv1.jpg",
+    live: "https://personal-portofolio-mu.vercel.app/",
+    github: "https://github.com/sandi-hermawan01/personal-portofolio.git",
+    status: "public",
   },
 ];
 
@@ -87,7 +92,7 @@ const Work = () => {
       <div className="container mx-auto xl:mt-5">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
+            <div className="flex flex-col gap-[20px] h-[50%]">
               {/* outline num */}
               <div
                 className={`${jetbrainsMono.variable} font-jetbrain text-8xl leading-none font-extrabold text-transparent text-outline`}
@@ -95,16 +100,22 @@ const Work = () => {
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-primary/80 group-hover:text-accent transition-all duration-500 capitalize">
+              <h1 className="text-[42px] font-bold leading-none text-primary/80 group-hover:text-accent transition-all duration-500 capitalize">
+                {project.title}
+              </h1>
+              <h2 className="text-xl font-bold leading-none text-primary/80 group-hover:text-accent transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
               {/* project descrip */}
               <p className="text-primary/70 text-md">{project.description}</p>
               {/* tech stack */}
-              <ul className="flex gap-4">
+              <h2 className="text-xl font-bold text-primary/80 mt-4">
+                Tech stack
+              </h2>
+              <ul className="grid grid-cols-3 xl:grid-cols-4 gap-4 items-center justify-center text-nowrap">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-primary">
+                    <li key={index} className="text-xl text-primary/70">
                       {item.name}
                       {index !== project.stack.length - 1 && ","}
                     </li>
@@ -136,12 +147,13 @@ const Work = () => {
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github Repo</p>
+                        <p>{project.status}</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
               </div>
+              <div className="w-full h-11"></div>
             </div>
           </div>
           <div className="w-full xl:w-[50%]">
@@ -149,12 +161,12 @@ const Work = () => {
               spaceBetween={30}
               slidesPerView={1}
               onSlideChange={handleSlideChange}
-              className="xl:h-[520px] mb-12"
+              className="xl:h-[520px] mb-12 "
             >
               {projects.map((project, index) => {
                 return (
-                  <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                  <SwiperSlide key={index} className="w-full ">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20 border-primary/50 border-[1.4px] shadow-xl">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}
@@ -163,7 +175,7 @@ const Work = () => {
                           src={project.image}
                           fill
                           alt=""
-                          className="object-cover"
+                          className="object-contain"
                         />
                       </div>
                     </div>
