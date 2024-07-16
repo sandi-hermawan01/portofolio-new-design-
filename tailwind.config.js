@@ -20,10 +20,12 @@ module.exports = {
       xl: "1200px",
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
+      primary: "var(--font-lora)",
+      fjallaOne: "var(--font-FjallaOne)",
     },
     extend: {
       colors: {
+        light: "#d4d4d4",
         primary: "#1c1c22",
         accent: {
           DEFAULT: "#00ff99",
@@ -43,6 +45,9 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        wuwa: "url('/assets/bg-wuwa.jpeg)",
       },
     },
   },

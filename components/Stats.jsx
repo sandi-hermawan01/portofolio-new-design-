@@ -43,7 +43,7 @@ const Stats = () => {
                 <p
                   className={`${
                     item.text.length < 15 ? "max-w-[200px]" : "max-w-[150px]"
-                  } leading-snug text-white/80`}
+                  } leading-snug text-primary`}
                 >
                   {item.text}
                 </p>

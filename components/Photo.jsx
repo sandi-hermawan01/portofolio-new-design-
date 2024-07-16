@@ -11,7 +11,7 @@ const Photo = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 1, duration: 0.3, ease: "easeIn" },
+          transition: { delay: 1.8, duration: 0.4, ease: "easeIn" },
         }}
       >
         {/* image */}
@@ -19,9 +19,9 @@ const Photo = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 1.4, duration: 0.3, ease: "easeInOut" },
+            transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[238px] h-[238px] xl:w-[400px] xl:h-[400px] mix-blend-lighten absolute"
+          className="w-[238px] h-[238px] xl:w-[400px] xl:h-[400px] absolute"
         >
           <Image
             src="/assets/personal-brand-logo.jpg"
