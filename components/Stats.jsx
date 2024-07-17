@@ -10,10 +10,10 @@ const stats = [
   },
   {
     num: 15,
-    text: "Projects completed",
+    text: "Projects done",
   },
   {
-    num: 4,
+    num: 7,
     text: "Technologies mastered",
   },
   {
