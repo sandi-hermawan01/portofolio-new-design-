@@ -35,6 +35,7 @@ const info = [
   },
 ];
 
+
 const Contact = () => {
   return (
     <motion.section

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -15,15 +17,15 @@ const Header = () => {
             Zsans <span className="text-accent">.</span>
           </h1>
         </Link>
-        {/* desktop navigation */}
+        {/* desktop nav */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
-            <Button>Contact</Button>
+            <Button variant="outline">Contact</Button>
           </Link>
         </div>
 
-        {/* mobile navigation */}
+        {/* mobile nav */}
         <div className="xl:hidden">
           <MobileNav />
         </div>
