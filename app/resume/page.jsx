@@ -21,11 +21,11 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Sandi Hermawna",
+      fieldValue: "Sandi Hermawan",
     },
     {
       fieldName: "Phone",
-      fieldValue: "+62 85123456789",
+      fieldValue: "+62 123456789",
     },
     {
       fieldName: "Experience",
