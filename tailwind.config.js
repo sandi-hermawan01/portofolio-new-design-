@@ -47,6 +47,11 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        footer: "url('/assets/environment/wave-footer.svg')",
+        footer2: "url('/assets/environment/wave-foter2.svg')",
+        footer3: "url('/assets/environment/wave-footer3.svg')",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
