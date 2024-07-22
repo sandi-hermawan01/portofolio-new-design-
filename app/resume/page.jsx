@@ -131,14 +131,6 @@ const skills = {
       icon: "?",
       name: "N/A",
     },
-    {
-      icon: "?",
-      name: "N/A",
-    },
-    {
-      icon: "?",
-      name: "N/A",
-    },
   ],
 };
 

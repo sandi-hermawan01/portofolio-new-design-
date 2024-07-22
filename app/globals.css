@@ -29,3 +29,25 @@
     -webkit-text-stroke: 2px #fff;
   }
 }
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1300 {
+  animation-delay: 1.3s;
+}

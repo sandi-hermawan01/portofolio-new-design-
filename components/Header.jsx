@@ -13,6 +13,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/">
+          <p className="absolute ml-[7rem] text-primary/50 top-5">[dev]</p>
           <h1 className="text-4xl font-semibold">
             Zsans <span className="text-accent">.</span>
           </h1>
