@@ -28,26 +28,11 @@
   .text-outline-hover {
     -webkit-text-stroke: 2px #fff;
   }
-}
-@keyframes fadeIn {
-  to {
-    transform: translateY(0);
-    filter: blur(0);
-    opacity: 1;
+
+  .embla__button {
+    @apply w-[3.6rem] h-[3.6rem] rounded-full flex items-center justify-center bg-transparent cursor-pointer border-0 shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)];
   }
-}
-
-.animate-fadeIn {
-  transform: translateY(30px);
-  filter: blur(20px);
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-.animation-delay-1000 {
-  animation-delay: 1s;
-}
-
-.animation-delay-1300 {
-  animation-delay: 1.3s;
+  .embla__button__svg {
+    @apply w-[35%] h-[35%];
+  }
 }
