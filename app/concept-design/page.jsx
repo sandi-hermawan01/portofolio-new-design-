@@ -7,6 +7,7 @@ import { JetBrains_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import EmblaCarousel from "@/components/Embla/EmblaCarousel";
+import EmblaCarouselTumdnail from "@/components/embla-tumdnail/EmblaCarouselTumdnail";
 
 const concept_design = [
   {
@@ -77,7 +78,7 @@ const sliderData = [
 ];
 //embla settings
 const OPTIONS = { loop: true };
-const SLIDE_COUNT = 5;
+const SLIDE_COUNT = 10;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const jetbrainsMono = JetBrains_Mono({
@@ -88,8 +89,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 const ConceptDesign = () => {
   return (
-    <section className="flex min-h-[75vh] xl:min-h-[73vh] items-end justify-end ">
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+    <section className="flex min-h-[75vh] xl:min-h-[73vh] items-center justify-center ">
+      {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
+      <EmblaCarouselTumdnail slides={SLIDES} options={OPTIONS} />
     </section>
   );
 };
