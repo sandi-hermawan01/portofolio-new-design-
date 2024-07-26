@@ -5,7 +5,46 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./EmblaCarouselThumbsButton";
 
 const EmblaCarouselTumdnail = (props) => {
-  const { slides, options } = props;
+  const {
+    slides = [
+      {
+        id: 1,
+        image: "/assets/concept/img1.png",
+        title: "Slider 01",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      },
+      {
+        id: 2,
+        image: "/assets/concept/img1.png",
+        title: "Slider 02",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      },
+      {
+        id: 3,
+        image: "/assets/concept/img1.png",
+        title: "Slider 03",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      },
+      {
+        id: 3,
+        image: "/assets/concept/img1.png",
+        title: "Slider 04",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      },
+      {
+        id: 3,
+        image: "/assets/concept/img1.png",
+        title: "Slider 05",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      },
+    ],
+    options,
+  } = props;
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
@@ -35,7 +74,7 @@ const EmblaCarouselTumdnail = (props) => {
   }, [emblaMainApi, onSelect]);
 
   return (
-    <div className="embla grid grid-cols-[900px_minmax(200px,_1fr)] justify-center items-center w-full mt-[4rem] gap-5 px-5 mx-auto [--slide-height:38rem] [--slide-spacing:1rem] [--slide-size:100%]">
+    <div className="embla grid grid-cols-[70%_minmax(0,_1fr)] justify-center items-center w-full mt-[4rem] gap-5 px-5 mx-auto [--slide-height:38rem] [--slide-spacing:1rem] [--slide-size:100%]">
       <div
         className="embla__viewport overflow-hidden border-2 border-primary/40"
         ref={emblaMainRef}
@@ -47,7 +86,11 @@ const EmblaCarouselTumdnail = (props) => {
               key={index}
             >
               <div className="embla__slide__number shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] rounded-3xl text-4xl font-semibold flex items-center justify-center h-[var(--slide-height)] select-none">
-                {index + 1}
+                <img
+                  className="embla__slide__img"
+                  src={`https://picsum.photos/600/350?v=${index}`}
+                  alt="Your alt text"
+                />
               </div>
             </div>
           ))}
