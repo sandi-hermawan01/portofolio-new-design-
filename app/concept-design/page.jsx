@@ -9,73 +9,6 @@ import Link from "next/link";
 import EmblaCarousel from "@/components/Embla/EmblaCarousel";
 import EmblaCarouselTumdnail from "@/components/embla-tumdnail/EmblaCarouselTumdnail";
 
-const concept_design = [
-  {
-    num: "01",
-    title: "Full Stack",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
-    href: "",
-  },
-  {
-    num: "02",
-    title: "Front end",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
-    href: "",
-  },
-  {
-    num: "03",
-    title: "Nodejs",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
-    href: "",
-  },
-  {
-    num: "04",
-    title: "Nextjs",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
-    href: "",
-  },
-];
-const sliderData = [
-  {
-    id: 1,
-    image: "/assets/concept/img1.png",
-    title: "Slider 01",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
-  },
-  {
-    id: 2,
-    image: "/assets/concept/img1.png",
-    title: "Slider 02",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
-  },
-  {
-    id: 3,
-    image: "/assets/concept/img1.png",
-    title: "Slider 03",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
-  },
-  {
-    id: 3,
-    image: "/assets/concept/img1.png",
-    title: "Slider 04",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
-  },
-  {
-    id: 3,
-    image: "/assets/concept/img1.png",
-    title: "Slider 05",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
-  },
-];
 //embla settings
 const OPTIONS = { loop: true };
 const SLIDE_COUNT = 5;
@@ -89,10 +22,17 @@ const jetbrainsMono = JetBrains_Mono({
 
 const ConceptDesign = () => {
   return (
-    <section className="flex min-h-[75vh] xl:min-h-[73vh] items-center justify-center ">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+      }}
+      className="flex min-h-[75vh] xl:min-h-[73vh] items-center justify-center "
+    >
       {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
       <EmblaCarouselTumdnail slides={SLIDES} options={OPTIONS} />
-    </section>
+    </motion.section>
   );
 };
 

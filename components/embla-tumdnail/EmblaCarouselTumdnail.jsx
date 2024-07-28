@@ -6,37 +6,77 @@ import { Thumb } from "./EmblaCarouselThumbsButton";
 
 const sliderData = [
   {
-    id: 1,
-    image: "/assets/concept/img1.png",
-    title: "Slider 01",
+    num: "01",
+    image: "/assets/work/zsans-blog-publisher-promo.png",
+    title: "Blog Publisher",
+    stack: [
+      { name: "React.js" },
+      { name: "Tailwind" },
+      { name: "Postcss" },
+      { name: "Express.Js" },
+      { name: "MongoDb" },
+      { name: "AWS S3" },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
   },
   {
-    id: 2,
+    num: "02",
     image: "/assets/concept/img2.jpg",
     title: "Slider 02",
+    stack: [
+      { name: "tech 1" },
+      { name: "tech 2" },
+      { name: "tech 3" },
+      { name: "tech 4" },
+      { name: "tech 5" },
+      { name: "tech 6" },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
   },
   {
-    id: 3,
+    num: "03",
     image: "/assets/concept/img3.jpg",
     title: "Slider 03",
+    stack: [
+      { name: "tech 1" },
+      { name: "tech 2" },
+      { name: "tech 3" },
+      { name: "tech 4" },
+      { name: "tech 5" },
+      { name: "tech 6" },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
   },
   {
-    id: 3,
+    num: "04",
     image: "/assets/concept/img4.jpg",
     title: "Slider 04",
+    stack: [
+      { name: "tech 1" },
+      { name: "tech 2" },
+      { name: "tech 3" },
+      { name: "tech 4" },
+      { name: "tech 5" },
+      { name: "tech 6" },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
   },
   {
-    id: 3,
+    num: "05",
     image: "/assets/concept/img5.jpg",
     title: "Slider 05",
+    stack: [
+      { name: "tech 1" },
+      { name: "tech 2" },
+      { name: "tech 3" },
+      { name: "tech 4" },
+      { name: "tech 5" },
+      { name: "tech 6" },
+    ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
   },
@@ -44,6 +84,7 @@ const sliderData = [
 
 const EmblaCarouselTumdnail = (props) => {
   const { slides, options } = props;
+  const [project, setProject] = useState(sliderData[0]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
@@ -63,6 +104,7 @@ const EmblaCarouselTumdnail = (props) => {
     if (!emblaMainApi || !emblaThumbsApi) return;
     setSelectedIndex(emblaMainApi.selectedScrollSnap());
     emblaThumbsApi.scrollTo(emblaMainApi.selectedScrollSnap());
+    setProject(sliderData[emblaMainApi.selectedScrollSnap()]);
   }, [emblaMainApi, emblaThumbsApi, setSelectedIndex]);
 
   useEffect(() => {
@@ -84,9 +126,30 @@ const EmblaCarouselTumdnail = (props) => {
               className="embla__slide flex-[0_0_var(--slide-size)] min-w-0 pl-[var(--slide-spacing)]"
               key={slides.id}
             >
-              <div className="embla__slide__number shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] rounded-3xl text-4xl font-semibold flex items-center justify-center h-[var(--slide-height)] select-none">
+              <div className="embla__slide__number shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] rounded-3xl text-4xl font-semibold flex flex-row flex-nowrap items-center justify-between px-2 h-[var(--slide-height)] select-none">
+                <div className="flex flex-col gap-3">
+                  <h2 className=" font-bold leading-none text-primary/80 group-hover:text-accent transition-all duration-500 capitalize">
+                    {slides.title}
+                  </h2>
+                  <p className="text-primary/70 text-xl font-normal">
+                    {slides.description}
+                  </p>
+                  <h2 className="text-xl font-bold text-primary/80 mt-4">
+                    Tech stack
+                  </h2>
+                  <ul className="grid grid-cols-3 xl:grid-cols-4 gap-3 items-center justify-center text-nowrap">
+                    {project.stack.map((slides, index) => {
+                      return (
+                        <li key={index} className="text-xl text-primary/70">
+                          {slides.name}
+                          {index !== project.stack.length - 1 && ","}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
                 <img
-                  className="embla__slide__img bg-cover bg-no-repeat bg-center object-cover"
+                  className="embla__slide__img h-[30vh] bg-cover bg-no-repeat bg-center object-cover"
                   src={slides.image}
                   alt={slides.title}
                 />
