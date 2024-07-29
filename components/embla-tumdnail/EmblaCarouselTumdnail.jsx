@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./EmblaCarouselThumbsButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBicycle } from "@fortawesome/free-solid-svg-icons";
 
 const sliderData = [
   {
@@ -83,6 +85,9 @@ const sliderData = [
 ];
 
 const EmblaCarouselTumdnail = (props) => {
+  const [initialChecked, setInitialChecked] = useState(false);
+  const [selectedWheel, setSelectedWheel] = useState(1);
+  const [buyChecked, setBuyChecked] = useState(false);
   const { slides, options } = props;
   const [project, setProject] = useState(sliderData[0]);
   const [selectedIndex, setSelectedIndex] = useState(0);
