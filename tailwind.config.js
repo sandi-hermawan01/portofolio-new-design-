@@ -23,6 +23,7 @@ module.exports = {
       primary: "var(--font-lora)",
       fjallaOne: "var(--font-FjallaOne)",
       jetbrain: "var(--font-jetbrainsMono)",
+      merriweather: "var(--font-merriweather)",
     },
 
     extend: {
