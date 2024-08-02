@@ -9,7 +9,13 @@ const sliderData = [
   {
     num: "01",
     image: "/assets/work/zsans-blog-publisher-promo.png",
+    sub_image: "/assets/work/zsans-blog-publisher-promo.png",
     title: "Blog Publisher",
+    sub_tittle:
+      "zsans - blog publiher is a platform to publish articles easily, created by sandi hermawan",
+    time: "Minggu, 23 desember, 2023",
+    stack_des:
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
     stack: [
       { name: "React.js" },
       { name: "Tailwind" },
@@ -19,67 +25,87 @@ const sliderData = [
       { name: "AWS S3" },
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      "This project is motivated by the abundance of paid article websites. This website offers fully free features with minimal advertising. The blog publisher is inspired by several social media platforms, such as Twitter, which can display the latest news based on trends.",
   },
   {
     num: "02",
-    image: "/assets/concept/img2.jpg",
-    title: "Slider 02",
+    image: "/assets/concept/img1.png",
+    sub_image: "/assets/concept/img1.png",
+    title: "Tittle Here",
+    sub_tittle: "Sub Tittle Here",
+    time: "Day, Month, Year",
+    stack_des:
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
     stack: [
-      { name: "tech 1" },
-      { name: "tech 2" },
-      { name: "tech 3" },
-      { name: "tech 4" },
-      { name: "tech 5" },
-      { name: "tech 6" },
+      { name: "Tech 1" },
+      { name: "Tech 2" },
+      { name: "Tech 3" },
+      { name: "Tech 4" },
+      { name: "Tech 5" },
+      { name: "Tech 6" },
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought tohave scrambled parts of Cicero's De Finibus Bonorumet Malorum for use in a type specimen book.",
   },
   {
     num: "03",
-    image: "/assets/concept/img3.jpg",
-    title: "Slider 03",
+    image: "/assets/concept/img2.jpg",
+    sub_image: "/assets/concept/img2.jpg",
+    title: "Tittle Here",
+    sub_tittle: "Sub Tittle Here",
+    time: "Day, Month, Year",
+    stack_des:
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
     stack: [
-      { name: "tech 1" },
-      { name: "tech 2" },
-      { name: "tech 3" },
-      { name: "tech 4" },
-      { name: "tech 5" },
-      { name: "tech 6" },
+      { name: "Tech 1" },
+      { name: "Tech 2" },
+      { name: "Tech 3" },
+      { name: "Tech 4" },
+      { name: "Tech 5" },
+      { name: "Tech 6" },
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought tohave scrambled parts of Cicero's De Finibus Bonorumet Malorum for use in a type specimen book.",
   },
   {
     num: "04",
-    image: "/assets/concept/img4.jpg",
-    title: "Slider 04",
+    image: "/assets/concept/img3.jpg",
+    sub_image: "/assets/concept/img3.jpg",
+    title: "Tittle Here",
+    sub_tittle: "Sub Tittle Here",
+    time: "Day, Month, Year",
+    stack_des:
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
     stack: [
-      { name: "tech 1" },
-      { name: "tech 2" },
-      { name: "tech 3" },
-      { name: "tech 4" },
-      { name: "tech 5" },
-      { name: "tech 6" },
+      { name: "Tech 1" },
+      { name: "Tech 2" },
+      { name: "Tech 3" },
+      { name: "Tech 4" },
+      { name: "Tech 5" },
+      { name: "Tech 6" },
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought tohave scrambled parts of Cicero's De Finibus Bonorumet Malorum for use in a type specimen book.",
   },
   {
     num: "05",
-    image: "/assets/concept/img5.jpg",
-    title: "Slider 05",
+    image: "/assets/concept/img4.jpg",
+    sub_image: "/assets/concept/img4.jpg",
+    title: "Tittle Here",
+    sub_tittle: "Sub Tittle Here",
+    time: "Day, Month, Year",
+    stack_des:
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
     stack: [
-      { name: "tech 1" },
-      { name: "tech 2" },
-      { name: "tech 3" },
-      { name: "tech 4" },
-      { name: "tech 5" },
-      { name: "tech 6" },
+      { name: "Tech 1" },
+      { name: "Tech 2" },
+      { name: "Tech 3" },
+      { name: "Tech 4" },
+      { name: "Tech 5" },
+      { name: "Tech 6" },
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.",
+      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought tohave scrambled parts of Cicero's De Finibus Bonorumet Malorum for use in a type specimen book.",
   },
 ];
 
@@ -119,6 +145,31 @@ const EmblaCarouselTumdnail = (props) => {
     emblaMainApi.on("select", onSelect).on("reInit", onSelect);
   }, [emblaMainApi, onSelect]);
 
+  const ListItem = ({ text }) => (
+    <li className="flex items-center gap-3 mt-3">
+      <span className="w-1.5 h-1.5 rounded-full bg-primary/70"></span>
+      <p className="text-primary/70 hover:underline">
+        {text}
+      </p>
+    </li>
+  );
+
+  const BulletList = ({ items }) => (
+    <ul className="flex flex-col text-base font-normal text-primary/70 space-y-2 ">
+      {items.map((item, index) => (
+        <ListItem key={index} text={item} />
+      ))}
+    </ul>
+  );
+  const SliderItem = ({ index }) => {
+    const item = sliderData[index];
+    return (
+      <div>
+        {/* Other parts of your component */}
+        <BulletList items={item.stack.map((stackItem) => stackItem.name)} />
+      </div>
+    );
+  };
   return (
     <div
       className={`${merriweather.variable} font-merriweather embla grid grid-cols-[70%_minmax(0,_1fr)] justify-center items-center w-full sm:mt-[5.5rem] mt-[2.5rem] gap-5 px-5 mx-auto [--slide-height:38rem] [--slide-spacing:1rem] [--slide-size:100%]`}
@@ -139,68 +190,44 @@ const EmblaCarouselTumdnail = (props) => {
                 <div className="flex flex-col w-full h-full ">
                   {/* header */}
                   <div className="w-full h-[6rem] flex items-center justify-center">
-                    <h1 className="text-[3.6rem] text-primary/70">
-                      Lorem Ipsum Dolor Sit Amet
+                    <h1 className="text-[3.3rem] text-primary/70">
+                      Concept and Design from Zsans Project
                     </h1>
                   </div>
                   <div className="w-full h-[3rem] text-xl font-normal border-t-2 border-b-2 border-primary/40 py-1">
                     <div className="flex w-full h-full items-center justify-around border-t-[1.5px] border-b-[1.5px] border-primary/40 ">
-                      <p className="text-primary/65">Lorem#1</p>
-                      <p className="text-primary/65">Lorem Ipsum</p>
-                      <p className="text-primary/65">Lorem</p>
+                      <p className="text-primary/65">Design #{slides.num}</p>
+                      <p className="text-primary/65">{slides.title}</p>
+                      <p className="text-primary/65">{slides.time}</p>
                     </div>
                   </div>
                   {/* body */}
                   <div className="grid grid-cols-[65%_minmax(0,_1fr)] w-full h-full mt-3 pr-2 pb-2">
-                    <div className="paper_body h-full w-full ">
-                      <div className="flex w-full h-[4rem] px-5 items-center">
+                    <div className="paper_body h-full w-full  ">
+                      <div className="flex w-full h-[4rem] px-5 items-center ">
                         <h3 className="text_tittle text-[2rem] text-primary/70 italic hover:underline">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit.
+                          {slides.sub_tittle}
                         </h3>
                       </div>
-                      <div className="flex w-full h-full mt-5 gap-10 px-5">
-                        <div className="flex h-full w-full  text-justify">
+                      <div className="flex w-full h-full mt-3 gap-10 px-5 ">
+                        <div className="flex flex-col h-full w-full  text-justify ">
                           <h4 className="text-base font-normal text-primary/70">
-                            Lorem ipsum, or lipsum as it is sometimes known, is
-                            dummy text used in laying out print, graphic or web
-                            designs. The passage is attributed to an unknown
-                            typesetter in the 15th century who is thought to
-                            have scrambled parts of Cicero's De Finibus Bonorum
-                            et Malorum for use in a type specimen book.
-                            <br />
-                            <br />
-                            The purpose of lorem ipsum is to create a natural
-                            looking block of text (sentence, paragraph, page,
-                            etc.) that doesn't distract from the layout. A
-                            practice not without controversy, laying out pages
-                            with meaningless filler text can be very useful when
-                            the focus is meant to be on design, not content.
+                            {slides.description}
                           </h4>
+                          <img
+                            className="embla__slide__img h-[13rem] mt-1 bg-cover bg-no-repeat bg-center object-cover grayscale hover:grayscale-0 ease-linear duration-300 border-[1.5px] border-primary"
+                            src={slides.image}
+                          />
                         </div>
                         <div className="flex flex-col h-full w-full group">
                           <h3 className="text-[1.6rem] text-primary/70 group-hover:bg-primary/85 group-hover:text-accent ease-linear duration-200">
-                            Lorem Ipsum 
+                            Feature Concept
                           </h3>
                           <h4 className="text-base font-normal text-primary/70 text-justify">
-                            Lorem ipsum, or lipsum as it is sometimes known, is
-                            dummy text used in laying out print, graphic or web
-                            designs.
+                            {slides.stack_des}
                           </h4>
-                          <ul className="flex flex-col text-base font-normal text-primary/70">
-                            <li className="flex items-center gap-3">
-                              <span className="w-[6px] h-[6px] rounded-full bg-primary/70"></span>
-                              <p className="text-primary/70">
-                                Lorem ipsum, or lipsum as it is sometimes known,
-                              </p>
-                            </li>
-                            <li className="flex items-center gap-3">
-                              <span className="w-[6px] h-[6px] rounded-full bg-primary/70"></span>
-                              <p className="text-primary/70">
-                                Lorem ipsum, or lipsum as it is sometimes known,
-                              </p>
-                            </li>
-                          </ul>
+                          {/* tech */}
+                          <SliderItem index={index} />
                         </div>
                       </div>
                     </div>

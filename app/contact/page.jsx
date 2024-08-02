@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 import {
   Select,
@@ -23,7 +24,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+62) 123456789",
+    description: "(+62) -",
   },
   {
     icon: <FaEnvelope />,
@@ -33,7 +34,7 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
-    description: "Bandung, Ciwidey 40973",
+    description: "Bandung Indonesia",
   },
 ];
 
@@ -42,6 +43,27 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Check if form fields are empty
+    const formElements = form.current.elements;
+    let isEmpty = false;
+
+    for (let i = 0; i < formElements.length; i++) {
+      if (
+        formElements[i].tagName === "INPUT" ||
+        formElements[i].tagName === "TEXTAREA"
+      ) {
+        if (formElements[i].value.trim() === "") {
+          isEmpty = true;
+          break;
+        }
+      }
+    }
+
+    if (isEmpty) {
+      alert("Form must be filled in");
+      return;
+    }
 
     emailjs
       .sendForm("service_tedv7zj", "template_7ij8bgw", form.current, {
@@ -52,7 +74,7 @@ const Contact = () => {
           console.log("SUCCESS!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.log("FAILED...");
         }
       );
   };
@@ -84,22 +106,22 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
                   type="firstname"
-                  placeholder="Firstname"
+                  placeholder="*Firstname"
                   name="user_firstname"
                 />
                 <Input
                   type="lastname"
-                  placeholder="Lastname"
+                  placeholder="*Lastname"
                   name="user_lastname"
                 />
                 <Input
                   type="email"
-                  placeholder="Email address"
+                  placeholder="*Email address"
                   name="user_email"
                 />
                 <Input
                   type="phone"
-                  placeholder="Phone number"
+                  placeholder="*Phone number"
                   name="user_phone"
                 />
               </div>
@@ -120,7 +142,7 @@ const Contact = () => {
               {/* text area */}
               <Textarea
                 className="h-[200px]"
-                placeholder="Type message."
+                placeholder="*Type message."
                 name="message"
               />
               <Button size="md" className="max-w-40" type="submit" value="Send">
