@@ -24,9 +24,9 @@ const HomeText = () => {
       }}
       className="text-center xl:text-left xl:justify-center order-2 xl:order-none "
     >
-      <h1 className={`${font_use} h1 mb-6 font-fjallaOne text-primary/80`}>
+      <h1 className={`${font_use} h1 mb-6 font-merriweather text-primary/80`}>
         Zsans Personal{" "}
-        <span className="text-accent font-fjallaOne">Portfolio</span>
+        <span className="text-accent font-merriweather">Portfolio</span>
       </h1>
       <span className={`text-xl font-semi`}>
         Web Developer || Frontend Developer
@@ -37,12 +37,17 @@ const HomeText = () => {
       </p>
       {/* social btn */}
       <div className="flex flex-col xl:flex-row items-center gap-8">
-        <Button
-          size="lg"
-          className="uppercase flex items-center gap-2 hover:text-accent"
+        <a
+          href="/assets/SandiHermawanResume.pdf"
+          download="resume_sandi-hermawan"
         >
-          Download Cv
-        </Button>
+          <Button
+            size="lg"
+            className="uppercase flex items-center gap-2 hover:text-accent"
+          >
+            Download Cv
+          </Button>
+        </a>
         <div className="mb-8 xl:mb-0">
           <Socials
             containerStyles="flex gap-6"
