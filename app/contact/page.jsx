@@ -107,7 +107,7 @@ const Contact = () => {
               ref={form}
               onSubmit={sendEmail}
             >
-              <h3 className="text-4xl text-primary">Let's work together</h3>
+              <h3 className="text-4xl text-primary">{`Let's work together`}</h3>
               <p className="text-primary/70 text-lg">
                 You can contact me via the form below or you can also contact me
                 via email.
