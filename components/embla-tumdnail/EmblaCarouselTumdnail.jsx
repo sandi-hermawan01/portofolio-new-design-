@@ -209,7 +209,7 @@ const EmblaCarouselTumdnail = (props) => {
                       </div>
                     </div>
                     {/* body */}
-                    <div className="grid lg:grid-cols-[65%_minmax(0,_1fr)] w-full h-full xl:mt-2">
+                    <div className="grid lg:grid-cols-[65%_minmax(0,_1fr)] w-full h-full xl:mt-2 lg:pr-2">
                       <div className="paper_body h-full w-full  ">
                         <div className="flex w-full h-[4rem] px-5 items-center mt-3 lg:mt-3 md:mt-0 xl:mt-0">
                           <h3 className="text-base text sm:text-base md:text-xl lg:text-2xl xl:text-[1.6rem] min-[1500px]:text-[2rem] text-primary/70 italic hover:underline">
@@ -244,7 +244,7 @@ const EmblaCarouselTumdnail = (props) => {
                           </div>
                         </div>
                       </div>
-                      <div className="h-[47vh] w-full border-[1.5px] border-primary mt-4 hidden lg:flex">
+                      <div className="h-[47vh] w-full border-[1.5px] border-primary mt-4 hidden lg:flex ">
                         <img
                           className="embla__slide__img h-full bg-cover bg-no-repeat bg-center object-cover grayscale hover:grayscale-0 ease-linear duration-300"
                           src={slides.image}
