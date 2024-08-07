@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./EmblaCarouselThumbsButton";
 import { Merriweather } from "next/font/google";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { motion } from "framer-motion";
+import useEmblaCarousel from "embla-carousel-react";
 
 const sliderData = [
   {
@@ -209,7 +210,7 @@ const EmblaCarouselTumdnail = (props) => {
                       </div>
                     </div>
                     {/* body */}
-                    <div className="grid lg:grid-cols-[65%_minmax(0,_1fr)] w-full h-full xl:mt-2 lg:pr-2">
+                    <div  className="grid lg:grid-cols-[65%_minmax(0,_1fr)] w-full h-full xl:mt-2 lg:pr-2">
                       <div className="paper_body h-full w-full  ">
                         <div className="flex w-full h-[4rem] px-5 items-center mt-3 lg:mt-3 md:mt-0 xl:mt-0">
                           <h3 className="text-base text sm:text-base md:text-xl lg:text-2xl xl:text-[1.6rem] min-[1500px]:text-[2rem] text-primary/70 italic hover:underline">

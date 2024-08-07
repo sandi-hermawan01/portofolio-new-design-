@@ -207,7 +207,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-primary/70 text-xl mx-auto xl:mx-0 drop-shadow-md">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[400px] border-2 border-primary/30 mb-5">
+                <ScrollArea className="h-[400px] border-[1.5px] border-primary/30 mb-5">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] p-5">
                     {education.items.map((item, index) => {
                       return (
