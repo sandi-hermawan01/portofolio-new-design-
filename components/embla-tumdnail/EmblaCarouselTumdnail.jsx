@@ -210,7 +210,7 @@ const EmblaCarouselTumdnail = (props) => {
                       </div>
                     </div>
                     {/* body */}
-                    <div  className="grid lg:grid-cols-[65%_minmax(0,_1fr)] w-full h-full xl:mt-2 lg:pr-2">
+                    <div className="grid lg:grid-cols-[65%_minmax(0,_1fr)] w-full h-full xl:mt-2 lg:pr-2">
                       <div className="paper_body h-full w-full  ">
                         <div className="flex w-full h-[4rem] px-5 items-center mt-3 lg:mt-3 md:mt-0 xl:mt-0">
                           <h3 className="text-base text sm:text-base md:text-xl lg:text-2xl xl:text-[1.6rem] min-[1500px]:text-[2rem] text-primary/70 italic hover:underline">
@@ -260,7 +260,12 @@ const EmblaCarouselTumdnail = (props) => {
         </div>
       </div>
 
-      <div className="embla-thumbs [--thumbs-slide-height:38rem] hidden xl:flex">
+      <div className="embla-thumbs [--thumbs-slide-height:38rem] hidden xl:flex ">
+        <div className="absolute w-[32.8rem] h-[38.4rem] ">
+          <div className="flex w-full h-full justify-end items-center">
+            <div className="h-full w-[35%] z-50 bg-gradient-to-l from-primary/30 from-[10%]"></div>
+          </div>
+        </div>
         <div
           className="embla-thumbs__viewport overflow-hidden "
           ref={emblaThumbsRef}

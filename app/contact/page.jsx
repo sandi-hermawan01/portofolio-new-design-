@@ -3,16 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { useToast } from "@/components/ui/use-toast";
+import { Toaster } from "@/components/ui/toaster";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -38,7 +30,8 @@ const info = [
 ];
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef(null);
+  const { toast } = useToast();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -49,7 +42,7 @@ const Contact = () => {
 
     for (let i = 0; i < formElements.length; i++) {
       if (
-        formElements[i].tagName === "INPUT" ||
+        formElements[i].classList.contains("hook-input") ||
         formElements[i].tagName === "TEXTAREA"
       ) {
         if (formElements[i].value.trim() === "") {
@@ -60,7 +53,10 @@ const Contact = () => {
     }
 
     if (isEmpty) {
-      alert("Form must be filled in");
+      toast({
+        variant: "destructive",
+        description: "Form must be filled in",
+      });
       return;
     }
 
@@ -70,10 +66,25 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          console.log("SUCCESS");
+          toast({
+            title: "Success",
+            description: "Email sent successfully!",
+          });
+          Array.from(form.current.elements).forEach((element) => {
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+              element.value = "";
+            }
+          });
         },
+
         (error) => {
           console.log("FAILED...");
+          toast({
+            variant: "destructive",
+            title: "Error",
+            description: "Failed to send email. Please try again.",
+          });
         }
       );
   };
@@ -99,54 +110,46 @@ const Contact = () => {
               <h3 className="text-4xl text-primary">Let's work together</h3>
               <p className="text-primary/70 text-lg">
                 You can contact me via the form below or you can also contact me
-                via email below.
+                via email.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
+                  className="hook-input placeholder:text-red-400"
                   type="firstname"
                   placeholder="*Firstname"
                   name="user_firstname"
                 />
+
                 <Input
+                  className="hook-input placeholder:text-red-400"
                   type="lastname"
                   placeholder="*Lastname"
                   name="user_lastname"
                 />
                 <Input
+                  className="hook-input placeholder:text-red-400"
                   type="email"
                   placeholder="*Email address"
                   name="user_email"
                 />
                 <Input
                   type="phone"
-                  placeholder="*Phone number"
+                  placeholder="Phone number"
                   name="user_phone"
                 />
               </div>
-              {/* select */}
-              <Select name="user_role">
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Selec a role</SelectLabel>
-                    <SelectItem value="est">Frontend Web</SelectItem>
-                    <SelectItem value="cst">Data science</SelectItem>
-                    <SelectItem value="mst">Ai engineer</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
+
               {/* text area */}
               <Textarea
-                className="h-[200px]"
+                className="h-[200px] placeholder:text-red-400"
                 placeholder="*Type message."
                 name="message"
               />
               <Button size="md" className="max-w-40" type="submit" value="Send">
                 Send message
               </Button>
+              <Toaster />
             </form>
           </div>
           {/* info */}

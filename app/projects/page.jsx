@@ -70,6 +70,48 @@ const projects = [
     github: "https://github.com/sandi-hermawan01/personal-portofolio.git",
     status: "public",
   },
+  {
+    num: "04",
+    category: "fullstack",
+    title: "sans wiki",
+    description: "Just a simple search tool based on wikipedia.",
+    stack: [{ name: "Html" }, { name: "Css" }, { name: "Javascript" }],
+    image: "/assets/work/sans-wiki.jpg",
+    live: "https://personal-portofolio-mu.vercel.app/features/wiki-site/wiki.html",
+    github:
+      "https://github.com/sandi-hermawan01/personal-portofolio/tree/master/public/features/wiki-site",
+    status: "public",
+  },
+  {
+    num: "05",
+    category: "frontend",
+    title: "spotify clone",
+    description: "spotify frontend clone",
+    stack: [{ name: "Html" }, { name: "Css" }],
+    image: "/assets/work/spotify-clone.jpg",
+    live: "https://personal-portofolio-mu.vercel.app/features/spotify-clone/spoti-home.html",
+    github:
+      "https://github.com/sandi-hermawan01/personal-portofolio/tree/master/public/features/spotify-clone",
+    status: "public",
+  },
+  {
+    num: "06",
+    category: "fullstack",
+    title: "zsans kanban",
+    description:
+      "This kanban is made for personal records, such as to write down what project development has been and will be done.",
+    stack: [
+      { name: "Html" },
+      { name: "Tailwind" },
+      { name: "React.js" },
+      { name: "Node.js" },
+      { name: "MongoDb" },
+    ],
+    image: "/assets/work/kanban_banner.jpg",
+    live: "",
+    github: "https://github.com/sandi-hermawan01/zsans-kanban",
+    status: "public",
+  },
 ];
 
 const Work = () => {

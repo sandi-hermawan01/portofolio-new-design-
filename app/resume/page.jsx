@@ -19,7 +19,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
+import { motion, useAnimate, stagger } from "framer-motion";
 
 //about
 const about = {
@@ -63,8 +63,7 @@ const about = {
 const experience = {
   icon: "/asset/resume/badge.svg",
   title: "My experience",
-  description:
-    "The following is my work experience, my experience in the world of work is still relatively small, but I always want to develop and try to keep up with technological developments.",
+  description: `The following is my work experience, my experience in the world of work is still relatively small, but I always want to develop and try to keep up with technological developments.`,
   items: [
     {
       company: "JDIH (Jaringan Dokumentasi dan Informasi Hukum) Kota Bandung",
@@ -173,6 +172,10 @@ const Resume = () => {
                 <p className="max-w-[600px] text-primary/70 text-xl mx-auto xl:mx-0 drop-shadow-md">
                   {experience.description}
                 </p>
+                {/* 
+                <p className="max-w-[600px] text-primary/70 text-xl mx-auto xl:mx-0 drop-shadow-md">
+                  {experience.description}
+                </p> */}
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] p-5">
                     {experience.items.map((item, index) => {
