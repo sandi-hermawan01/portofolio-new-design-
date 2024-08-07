@@ -49,7 +49,7 @@ const projects = [
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "frontend",
     title: "portfolio v2",
     description: "Nothing special on this theme, just a simple portfolio",
     stack: [{ name: "Node.js" }, { name: "Next.js" }, { name: "Tailwind" }],
@@ -63,7 +63,7 @@ const projects = [
     category: "fullstack",
     title: "portfolio v1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cuipiditate magnam modThis is my first portfolio using vanilla technology like html css, the design is pretty good but the structure is still messy :)",
+      "This is my first portfolio using vanilla technology like html css, the design is pretty good but the structure is still messy :)",
     stack: [{ name: "Html" }, { name: "Css" }, { name: "Javascript" }],
     image: "/assets/work/portfv1.jpg",
     live: "https://personal-portofolio-mu.vercel.app/",

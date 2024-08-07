@@ -1,6 +1,13 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNode } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaNode,
+  FaPython,
+} from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
@@ -128,8 +135,8 @@ const skills = {
       name: "tailwind",
     },
     {
-      icon: "?",
-      name: "N/A",
+      icon: <FaPython />,
+      name: "python",
     },
   ],
 };

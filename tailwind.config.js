@@ -36,6 +36,9 @@ module.exports = {
         },
       },
       keyframes: {
+        scrollLeft: {
+          to: { left: "-200px" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -53,6 +56,7 @@ module.exports = {
         },
       },
       animation: {
+        scrollLeft: "scrollLeft 30s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         showContent: "showContent 0.5s 0.7s ease-in-out forwards",
