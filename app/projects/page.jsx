@@ -43,7 +43,7 @@ const projects = [
       { name: "AWS S3" },
     ],
     image: "/assets/work/zsans-blog-publisher-promo.png",
-    live: "https://www.zsans-product.tech/",
+    live: "https://blog-client-gilt.vercel.app/",
     github: "",
     status: "private",
   },
